@@ -22,7 +22,7 @@
   try{
     $sql = "SELECT * FROM user WHERE id = :id";
     $stmt = $dbh->prepare($sql);
-    /* (1)ここに適切なバインド処理を追加して下さい  */
+    /* ■(1)ここに適切なバインド処理を追加して下さい  */
 
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -55,12 +55,12 @@
             <div class="col-sm-8 col-sm-offset-2">
                 <div class="form-group">
                     <label for="name"><span class="required">お名前</span> </label>
-                    /* (2)ここに「名前」欄の初期表示処理を追加して下さい  */
+                    /* ■(2)ここに「名前」欄の初期表示処理を追加して下さい  */
 
                 </div>
                 <div class="form-group">
                     <label for="email"><span class="required">メールアドレス</span> </label>
-                    /* (3)ここに「メールアドレス」欄の初期表示処理を追加して下さい  */
+                    /* ■(3)ここに「メールアドレス」欄の初期表示処理を追加して下さい  */
 
                 </div>
                 <div class="form-group">
@@ -70,7 +70,7 @@
                           echo "<label class='radio-inline'>";
                           echo "    <input type='radio' name='gender' value='1' required";
                           if( $row[gender] === 1 ) {
-　　　　　　　　　　　　　　　　/* (4)ここにラジオボタンの初期表示処理を追加してください  */
+　　　　　　　　　　　　　　　　/* ■(4)ここにラジオボタンの初期表示処理を追加してください  */
 
                           } else {
                           	 echo ">男性";
@@ -79,7 +79,7 @@
                           echo "<label class='radio-inline'>";
                           echo "    <input type='radio' name='gender' value='2' required";
                           if( $row[gender] === 2 ) {
-　　　　　　　　　　　　　　　　/* (5)ここにラジオボタンの初期表示処理を追加してください  */
+　　　　　　　　　　　　　　　　/* ■(5)ここにラジオボタンの初期表示処理を追加してください  */
 
                           } else {
                           	 echo ">女性";
@@ -88,7 +88,7 @@
                           echo "<label class='radio-inline'>";
                           echo "    <input type='radio' name='gender' value='9' required";
                           if( $row[gender] === 9 ) {
-　　　　　　　　　　　　　　　　/* (6)ここにラジオボタンの初期表示処理を追加してください  */
+　　　　　　　　　　　　　　　　/* ■(6)ここにラジオボタンの初期表示処理を追加してください  */
 
                           } else {
                           	 echo ">その他";
