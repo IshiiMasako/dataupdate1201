@@ -24,6 +24,8 @@
     $stmt = $dbh->prepare($sql);
     /* ■(1)ここに適切なバインド処理を追加して下さい  */
 
+    /* ■(1)ここまで  */
+
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -57,10 +59,14 @@
                     <label for="name"><span class="required">お名前</span> </label>
                     /* ■(2)ここに「名前」欄の初期表示処理を追加して下さい  */
 
+                    /* ■(2)ここまで  */
+
                 </div>
                 <div class="form-group">
                     <label for="email"><span class="required">メールアドレス</span> </label>
                     /* ■(3)ここに「メールアドレス」欄の初期表示処理を追加して下さい  */
+
+                    /* ■(3)ここまで  */
 
                 </div>
                 <div class="form-group">
@@ -72,6 +78,8 @@
                           if( $row[gender] === 1 ) {
 　　　　　　　　　　　　　　　　/* ■(4)ここにラジオボタンの初期表示処理を追加してください  */
 
+　　　　　　　　　　　　　　　　/* ■(4)ここまで  */
+
                           } else {
                           	 echo ">男性";
                           }
@@ -81,6 +89,8 @@
                           if( $row[gender] === 2 ) {
 　　　　　　　　　　　　　　　　/* ■(5)ここにラジオボタンの初期表示処理を追加してください  */
 
+　　　　　　　　　　　　　　　　/* ■(5)ここまで */
+
                           } else {
                           	 echo ">女性";
                           }
@@ -89,6 +99,8 @@
                           echo "    <input type='radio' name='gender' value='9' required";
                           if( $row[gender] === 9 ) {
 　　　　　　　　　　　　　　　　/* ■(6)ここにラジオボタンの初期表示処理を追加してください  */
+
+　　　　　　　　　　　　　　　　/* ■(6)ここまで  */
 
                           } else {
                           	 echo ">その他";
