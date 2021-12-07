@@ -15,8 +15,8 @@ $edit = $_SESSION["edit"];
 
 $dbh = db_conn();      // データベース接続
 try {
-    /* ■(2)ここにSQL文＋プレースホルダー　の文字列を準備する処理を追加して下さい  */
-    $sql = "update user set name = :name, gender = :gender, email =:email where id = :id";
+    /* ■(2)ここにSQL文＋プレースホルダーの文字列を準備する処理を追加して下さい  */
+    $sql = "update user set name = :name, gender = :gender, email =:email, updatedate = NOW() where id = :id";
     /* ■(2)ここまで  */
 
     $stmt = $dbh->prepare($sql);                           //クエリの実行準備
